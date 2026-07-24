@@ -3,70 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réservation de Voyages</title>
+    <title>Admin - Connexion</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome pour les icônes -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <!-- Navigation avec lien Accueil -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="/">
-                <i class="fas fa-bus"></i> VoyageReserve
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/"><i class="fas fa-home"></i> Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/reservation.html"><i class="fas fa-ticket"></i> Réserver</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/historique.html"><i class="fas fa-history"></i> Historique</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin/index.html"><i class="fas fa-user-shield"></i> Admin</a>
-                    </li>
-                </ul>
+            <a class="navbar-brand" href="/"><i class="fas fa-bus"></i> VoyageReserve</a>
+            <div>
+                <a href="/" class="btn btn-outline-light btn-sm">
+                    <i class="fas fa-home"></i> Accueil
+                </a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="hero-section bg-light py-5">
-        <div class="container text-center py-5">
-            <h1 class="display-3 fw-bold text-primary">Voyagez en toute simplicité</h1>
-            <p class="lead">Réservez vos voyages en quelques clics et choisissez vos sièges préférés</p>
-            <a href="/reservation.html" class="btn btn-primary btn-lg mt-3">
-                <i class="fas fa-search"></i> Réserver maintenant
-            </a>
-        </div>
-    </div>
-
-    <!-- Voyages disponibles -->
     <div class="container my-5">
-        <h2 class="text-center mb-4">Voyages disponibles</h2>
-        <div id="voyagesList" class="row g-4">
-            <!-- Les voyages seront chargés dynamiquement via JavaScript -->
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h4><i class="fas fa-user-shield"></i> Administration</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="adminLoginForm">
+                            <div class="mb-3">
+                                <label for="adminEmail" class="form-label">Email</label>
+                                <input type="email" id="adminEmail" class="form-control" value="nour@gmail.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="adminPassword" class="form-label">Mot de passe</label>
+                                <input type="password" id="adminPassword" class="form-control" value="1234" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fas fa-sign-in-alt"></i> Se connecter
+                            </button>
+                            <a href="/" class="btn btn-secondary w-100 mt-2">
+                                <i class="fas fa-arrow-left"></i> Retour à l'accueil
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <div class="container">
-            <p class="mb-0">&copy; 2026 VoyageReserve </p>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="../js/admin.js"></script>
 </body>
 </html>
